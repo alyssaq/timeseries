@@ -15,4 +15,6 @@ Timeseries analytics
 
 ## Tests
 
-  $ nosetests . -v
+To run:
+
+    $ nosetests . -v

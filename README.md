@@ -6,3 +6,13 @@ Timeseries analytics
   * See underlying pattern
   * Remove noise from signal
   * Detect anomalies (3-sigma)
+
+2. Holt Winters:
+
+  * Smooth signal
+  * Seasonal timeseries predictions
+
+
+## Tests
+
+  $ nosetests . -v

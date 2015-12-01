@@ -10,11 +10,12 @@ import time
 
 def initial(Y, m):
   """
-  Initial holt winters parameters
+  Initial holt winters values
   http://robjhyndman.com/hyndsight/hw-initialization
+
   :param Y: array. Input array of timeseries values.
   :param m: int. Number of samples in a season. E.g. monthly = 12, weekly = 7
-  :returns: 3 initial smoothing parameters: alpha, beta, gamma.
+  :returns: 3 initial values
   """
   a = [np.mean(Y[:m])]
   b = [(sum(Y[m:2 * m]) - sum(Y[:m])) / m ** 2]
@@ -41,7 +42,9 @@ def RMSE(params, *args):
   return rmse
 
 def multiplicative(Y, m, fc, alpha = None, beta = None, gamma = None):
-  """ Multiplicative Holt Winters
+  """
+  Multiplicative Holt Winters
+
   :param Y: array. Input array of timeseries values.
   :param m: int. Number of samples in a season. E.g. monthly = 12, weekly = 7
   :param fc: int. Number of samples to forecast
